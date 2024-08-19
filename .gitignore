@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#　スクリーンショットの画像は管理しない
+screenshot.png
