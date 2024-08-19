@@ -21,7 +21,10 @@ app.post('/screenshot', async (req, res) => {
     }
 
     try {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        });        
         const page = await browser.newPage();
         await page.goto(url);
         const screenshotPath = path.join(__dirname, 'screenshot.png');

@@ -4,7 +4,9 @@
   "description": "外部サイトのスクリーンショットを撮るWebサイトをRenderで公開",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./render-build.sh",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
